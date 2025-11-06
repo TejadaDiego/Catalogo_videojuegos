@@ -1,70 +1,122 @@
+/* === Estilo general === */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
+  font-family: "Inter", "Poppins", sans-serif;
+  color: #e5e5e5;
+  background-color: #0e0e0e;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
-  position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* 🔹 Capa oscura encima del fondo */
+/* Oscurecer el fondo un poco */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65); /* ajusta el 0.65 según la intensidad que quieras */
-  z-index: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
 }
 
-/* 🔹 Contenido principal encima de la capa oscura */
-header, .consejo-bloque {
-  position: relative;
-  z-index: 1;
-}
-
-.header {
+/* === Encabezado === */
+header {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 16px 32px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid rgba(255,255,255,0.1);
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.header img {
-  width: 90px;
+header img {
+  width: 110px;
   height: auto;
-  border-radius: 10px;
+  /* 🔹 sin filtro para conservar el color original */
 }
 
+#gameTitle {
+  font-size: 1.6em;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #f2f2f2;
+  letter-spacing: 0.5px;
+}
+
+/* === Contenedor principal === */
+#consejosContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 60px;
+  gap: 28px;
+}
+
+/* === Cada bloque de consejo === */
 .consejo-bloque {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
+  gap: 24px;
+  background: rgba(25, 25, 25, 0.55); /* 🔹 Más transparente */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
   max-width: 900px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.consejo-bloque:hover {
+  background: rgba(35, 35, 35, 0.65);
+  transform: translateY(-2px);
+}
+
+/* Imagen */
 .consejo-bloque img {
-  width: 250px;
-  height: auto;
+  width: 220px;
+  height: 130px;
+  object-fit: cover;
   border-radius: 10px;
-  flex-shrink: 0;
+  filter: brightness(0.95);
+  transition: all 0.3s ease;
 }
 
+.consejo-bloque:hover img {
+  filter: brightness(1.1);
+}
+
+/* Texto */
 .consejo-bloque .texto {
-  max-width: 550px;
-  line-height: 1.5;
+  flex: 1;
+}
+
+.consejo-bloque .texto h2 {
+  margin: 0 0 8px;
+  font-size: 1.2em;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.consejo-bloque .texto p {
+  margin: 0;
+  line-height: 1.6;
+  color: #d2d2d2;
+  font-weight: 300;
+}
+
+/* === Responsivo === */
+@media (max-width: 700px) {
+  .consejo-bloque {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consejo-bloque img {
+    width: 100%;
+    height: 180px;
+  }
 }

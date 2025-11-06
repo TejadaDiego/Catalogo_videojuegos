@@ -1,3 +1,13 @@
+// 🟣 Normalizador para evitar errores con acentos o mayúsculas
+function normalizarTexto(texto) {
+  return texto
+    .normalize("NFD") // separa los acentos
+    .replace(/[\u0300-\u036f]/g, "") // elimina los acentos
+    .replace(/[’']/g, "'") // normaliza comillas raras
+    .toLowerCase()
+    .trim();
+}
+
 // 🔹 Datos de todos los juegos (puedes agregar más)
 const data = {
   "god of war: ragnarok": {
@@ -5,70 +15,191 @@ const data = {
     fondo: "imagenes/kratosfondo.jpg",
     consejos: [
       {
-        titulo: "Domina el combate cuerpo a cuerpo",
-        texto: "Usa los combos del hacha Leviatán y las cuchillas del caos según el tipo de enemigo para maximizar el daño.",
+        titulo: "Defensa y contraataque: timing perfecto",
+        texto:
+          "Parry / Block perfecto: bloquea justo antes del impacto (L1). Si lo haces bien, verás un destello dorado y el enemigo quedará aturdido — aprovecha con un ataque fuerte (△) o un ataque rúnico (L1 + R1 / L1 + R2). Esquiva lateralmente (✖✖) para girar alrededor del enemigo y golpear por la espalda.",
         imagen: "imagenes/kratosescudo.jpg"
       },
       {
-        titulo: "Explora todo Midgard",
-        texto: "Hay muchos cofres ocultos y desafíos que te darán materiales para mejorar tus armas y armaduras.",
-        imagen: "imagenes/kratos2.jpg"
+        titulo: "Aprovecha los ataques elementales",
+        texto:
+          "Pulsa y mantén R2 para lanzar un ataque cargado con el hacha Leviatán (daño de hielo) o el Blades of Chaos (daño de fuego). Algunos enemigos son débiles a uno de estos elementos: usa el opuesto para maximizar daño.",
+        imagen: "imagenes/kratoselemental.jpg"
       },
       {
-        titulo: "Aprovecha los parrys",
-        texto: "Bloquear en el momento justo puede salvarte de recibir grandes cantidades de daño.",
-        imagen: "imagenes/kratos3.jpg"
+        titulo: "Usa Atreus inteligentemente",
+        texto:
+          "Pulsa ⬜ para hacer que Atreus dispare flechas a distancia. Es ideal para distraer enemigos mientras recargas ataques rúnicos o curas con L3 + R3 (Furia espartana). También puede activar runas o romper escudos etéreos.",
+        imagen: "imagenes/atreus.webp"
+      },
+      {
+        titulo: "Secretos y mejoras ocultas",
+        texto:
+          "Completa las pruebas de Muspelheim para conseguir las mejores armaduras. En Niflheim, puedes farmear niebla para crear encantamientos únicos. Los cofres legendarios dorados contienen runas poderosas: búscalos en zonas altas y usa el hacha lanzada para activar los sellos.",
+        imagen: "imagenes/cofre.jpeg"
       }
     ]
   },
 
-  "dead space": {
-    logo: "imagenes/logodeadspace.png",
-    fondo: "imagenes/fondodeadspace.jpg",
+  "resident evil 4 remake": {
+    logo: "imagenes/logoresi.png",
+    fondo: "imagenes/fondore.jpg",
     consejos: [
       {
-        titulo: "Apunta a las extremidades, no a la cabeza.",
-        texto: "Los necromorfos solo mueren si les cortas las extremidades. Dispara a brazos y piernas para detenerlos más rápido.",
-        imagen: "imagenes/deadspace1.jpg"
+        titulo: "Dispara, patea, remata",
+        texto:
+          "Apunta a la cabeza con L2 + R2, y cuando el enemigo quede tambaleando, acércate y pulsa ✖ para una patada que derriba a varios. Luego, remátalos en el suelo con cuchillo (L1 + R2).",
+        imagen: "imagenes/disparo.webp"
       },
       {
-        titulo: "Ahorra munición.",
-        texto: "Cada bala cuenta. Si un enemigo está en el suelo, remátalo con pisotones para no gastar balas.",
-        imagen: "imagenes/deadspace2.jpg"
+        titulo: "Administra tu inventario",
+        texto:
+          "Usa el maletín con orden: coloca armas grandes abajo y curas arriba. Combina pólvoras (Y en PC, ✖ en consola) para crear munición y guarda espacio para granadas de mano.",
+        imagen: "imagenes/inventario.png"
       },
       {
-        titulo: "Escucha los sonidos.",
-        texto: "El audio te avisa de enemigos antes de verlos. Usa auriculares para una experiencia más inmersiva.",
-        imagen: "imagenes/deadspace3.jpg"
+        titulo: "Truco del comerciante",
+        texto:
+          "Vende las gemas solo cuando completes un tesoro completo (combina rubíes, zafiros, etc.). Ganarás hasta el doble de pesetas.",
+        imagen: "imagenes/buho.jpg"
+      }
+    ]
+  },
+
+  "cuphead": {
+    logo: "imagenes/logocup.png",
+    fondo: "imagenes/fondocup.jpg",
+    consejos: [
+      {
+        titulo: "Domina el Parry",
+        texto:
+          "Salta (A) y presiona A nuevamente justo cuando estés sobre un objeto rosa para hacer Parry. Esto recarga una carta de energía y te permite usar ataques EX con B.",
+        imagen: "imagenes/parry.webp"
+      },
+      {
+        titulo: "Elige bien tus armas",
+        texto:
+          "El Chaser (autoapunta) es ideal para jefes móviles, mientras que el Spread (disparo corto) es brutal a corta distancia. Cámbialos según el enemigo (LB o L1).",
+        imagen: "imagenes/cup2.jpg"
+      },
+      {
+        titulo: "Modo oculto experto",
+        texto:
+          "Completa el juego una vez y desbloquearás el Modo Experto, donde los jefes atacan más rápido. Usa Charms como Smoke Bomb (esquiva invencible) para sobrevivir.",
+        imagen: "imagenes/cup3.jpg"
+      }
+    ]
+  },
+  "cuphead": {
+    logo: "imagenes/logocup.png",
+    fondo: "imagenes/fondocup.jpg",
+    consejos: [
+      {
+        titulo: "Domina el Parry",
+        texto:
+          "Salta (A) y presiona A nuevamente justo cuando estés sobre un objeto rosa para hacer Parry. Esto recarga una carta de energía y te permite usar ataques EX con B.",
+        imagen: "imagenes/parry.webp"
+      },
+      {
+        titulo: "Elige bien tus armas",
+        texto:
+          "El Chaser (autoapunta) es ideal para jefes móviles, mientras que el Spread (disparo corto) es brutal a corta distancia. Cámbialos según el enemigo (LB o L1).",
+        imagen: "imagenes/cup2.jpg"
+      },
+      {
+        titulo: "Modo oculto experto",
+        texto:
+          "Completa el juego una vez y desbloquearás el Modo Experto, donde los jefes atacan más rápido. Usa Charms como Smoke Bomb (esquiva invencible) para sobrevivir.",
+        imagen: "imagenes/cup3.jpg"
+      }
+    ]
+  },
+  "minecraft": {
+    logo: "imagenes/miencraftlogo.png",
+    fondo: "imagenes/minelogo.jpg",
+    consejos: [
+      {
+        titulo: "Domina el crafteo",
+        texto:
+          "Aprende las combinaciones básicas: madera → tabla → palos → herramientas. Dominar el orden te ahorra tiempo al empezar un nuevo mundo.",
+        imagen: "imagenes/craft.jpg"
+      },
+      {
+        titulo: "Elige bien tus encantamientos",
+        texto:
+          "No todos los encantamientos sirven igual para cada herramienta.Por ejemplo, Eficiencia y Toque de Seda son ideales para el pico, mientras que Reparación y Irrompibilidad te ayudarán a conservar tus objetos valiosos.",
+        imagen: "imagenes/encant.jpg"
+      },
+      {
+        titulo: "Modo supervivencia",
+        texto:
+          "De noche, los enemigos aparecen con más frecuencia.Construye un refugio antes del anochecer y coloca antorchas alrededor para evitar que los mobs se acerquen.",
+        imagen: "imagenes/survive.png"
+      }
+    ]
+  },
+  "Assassin’s Creed Valhalla": {
+    logo: "imagenes/aslogo.jpg",
+    fondo: "imagenes/asfondo.jpg",
+    consejos: [
+      {
+        titulo: "Aprovecha el sigilo",
+        texto:
+          "AAunque Valhalla prioriza el combate, el sigilo sigue siendo una herramienta letal.Activa la opción “Asesinato avanzado” en el menú de dificultad para poder eliminar enemigos de un solo golpe si aciertas el QTE.",
+        imagen: "imagenes/shh.jpg"
+      },
+      {
+        titulo: "Elige bien tus encantamientos",
+        texto:
+          "No todos los encantamientos sirven igual para cada herramienta.Por ejemplo, Eficiencia y Toque de Seda son ideales para el pico, mientras que Reparación y Irrompibilidad te ayudarán a conservar tus objetos valiosos.",
+        imagen: "imagenes/encant.jpg"
+      },
+      {
+        titulo: "Modo supervivencia",
+        texto:
+          "De noche, los enemigos aparecen con más frecuencia.Construye un refugio antes del anochecer y coloca antorchas alrededor para evitar que los mobs se acerquen.",
+        imagen: "imagenes/survive.png"
       }
     ]
   }
+  
 };
 
-// 🔸 Selecciona el juego que quieras mostrar
-const juegoActual = "god of war: ragnarok"; // cambia aquí por "dead space" u otro
+// 🟣 Carga el juego seleccionado desde localStorage
+const selectedGame = JSON.parse(localStorage.getItem("selectedGame"));
+const nombreNormalizado = normalizarTexto(selectedGame.nombre);
 
-// 🔸 Aplica los datos al HTML
-const juego = data[juegoActual];
-document.body.style.backgroundImage = `url(${juego.fondo})`;
-document.getElementById("logoJuego").src = juego.logo;
-document.getElementById("gameTitle").textContent = juegoActual;
+// Buscar el juego en el objeto de datos (sin importar acentos o comillas)
+const clave = Object.keys(data).find(
+  (k) => normalizarTexto(k) === nombreNormalizado
+);
 
-// 🔸 Contenedor principal
-const contenedor = document.getElementById("consejosContainer");
-contenedor.innerHTML = ""; // limpia antes de agregar
+if (!clave) {
+  console.error("Juego no encontrado:", selectedGame);
+} else {
+  const juego = data[clave];
 
-juego.consejos.forEach(c => {
-  const bloque = document.createElement("div");
-  bloque.classList.add("consejo-bloque");
+  // Fondo oscurecido y centrado
+  document.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${juego.fondo})`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
 
-  bloque.innerHTML = `
-    <img src="${c.imagen}" alt="Imagen del consejo">
-    <div class="texto">
-      <h2>${c.titulo}</h2>
-      <p>${c.texto}</p>
-    </div>
-  `;
+  document.getElementById("logoJuego").src = juego.logo;
+  document.getElementById("gameTitle").textContent = clave;
 
-  contenedor.appendChild(bloque);
-});
+  const contenedor = document.getElementById("consejosContainer");
+  contenedor.innerHTML = "";
+
+  juego.consejos.forEach((c) => {
+    const bloque = document.createElement("div");
+    bloque.classList.add("consejo-bloque");
+    bloque.innerHTML = `
+      <img src="${c.imagen}" alt="Imagen del consejo">
+      <div class="texto">
+        <h2>${c.titulo}</h2>
+        <p>${c.texto}</p>
+      </div>
+    `;
+    contenedor.appendChild(bloque);
+  });
+}
