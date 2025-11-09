@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Interactivo de Videojuegos</title>
+    <link rel="stylesheet" href="Styless.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 CATALOG GAMES</h1>
+        <div class="filters">
+            <select id="filterGenre">
+                <option value="all">Todos los Géneros</option>
+                <option value="Acción">Acción</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Estrategia">Estrategia</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Terror">Terror</option>
+            </select>
+
+            <select id="sortOrder">
+                <option value="az">Ordenar A - Z</option>
+                <option value="za">Ordenar Z - A</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="gameCatalog" class="catalog"></main>
+
+    <script src="Scripts.js"></script>
+</body>
+</html>
