@@ -1,4 +1,4 @@
-/* Fondo con degradado azul-blanco-negro animado */
+/* === FONDO ANIMADO AZUL-BLANCO-NEGRO === */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@ body {
   background-size: 300% 300%;
   animation: gradientMove 10s ease infinite;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -19,15 +20,56 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Contenedor del login */
+/* === NAVBAR UNIFICADA === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #000000, #002b80, #000000);
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+  padding: 15px 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #00aaff;
+}
+
+.navbar a:hover {
+  color: #00aaff;
+  text-shadow: 0 0 15px #00ccff, 0 0 30px #0066ff;
+  transform: scale(1.05);
+}
+
+/* === CONTENEDOR DEL LOGIN === */
 .login-container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 40px;
   border-radius: 15px;
   text-align: center;
   color: white;
   width: 300px;
-  box-shadow: 0 0 25px rgba(0, 102, 255, 0.5);
+  margin-top: 100px; /* para dejar espacio a la navbar fija */
+  box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
+  backdrop-filter: blur(6px);
 }
 
 /* Imagen del usuario */
@@ -95,4 +137,3 @@ button:hover {
 .register-text a:hover {
   text-decoration: underline;
 }
-

@@ -206,3 +206,46 @@ body {
   .flecha-der { right: 10px; }
 }
 
+/* === NAVBAR (MENÚ SUPERIOR) === */
+.navbar {
+  background-color: #000;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f39c12;
+}
+
+/* === BOTONES DE NAVEGACIÓN === */
+.btn-inicio {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.btn-inicio:hover {
+  background-color: #d35400;
+}

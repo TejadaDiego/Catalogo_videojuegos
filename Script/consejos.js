@@ -8,7 +8,7 @@ function normalizarTexto(texto) {
     .trim();
 }
 
-// 🔹 Datos de todos los juegos (puedes agregar más)
+// 🔹 Datos de todos los juegos
 const data = {
   "god of war: ragnarok": {
     logo: "imagenes/logokratos.png",
@@ -17,26 +17,14 @@ const data = {
       {
         titulo: "Defensa y contraataque: timing perfecto",
         texto:
-          "Parry / Block perfecto: bloquea justo antes del impacto (L1). Si lo haces bien, verás un destello dorado y el enemigo quedará aturdido — aprovecha con un ataque fuerte (△) o un ataque rúnico (L1 + R1 / L1 + R2). Esquiva lateralmente (✖✖) para girar alrededor del enemigo y golpear por la espalda.",
+          "Bloquea justo antes del impacto (L1). Si lo haces bien, verás un destello dorado y el enemigo quedará aturdido.",
         imagen: "imagenes/kratosescudo.jpg"
       },
       {
-        titulo: "Aprovecha los ataques elementales",
+        titulo: "Ataques elementales",
         texto:
-          "Pulsa y mantén R2 para lanzar un ataque cargado con el hacha Leviatán (daño de hielo) o el Blades of Chaos (daño de fuego). Algunos enemigos son débiles a uno de estos elementos: usa el opuesto para maximizar daño.",
+          "Usa el hacha Leviatán para ataques de hielo o las Espadas del Caos para fuego. Alterna según la debilidad enemiga.",
         imagen: "imagenes/kratoselemental.jpg"
-      },
-      {
-        titulo: "Usa Atreus inteligentemente",
-        texto:
-          "Pulsa ⬜ para hacer que Atreus dispare flechas a distancia. Es ideal para distraer enemigos mientras recargas ataques rúnicos o curas con L3 + R3 (Furia espartana). También puede activar runas o romper escudos etéreos.",
-        imagen: "imagenes/atreus.webp"
-      },
-      {
-        titulo: "Secretos y mejoras ocultas",
-        texto:
-          "Completa las pruebas de Muspelheim para conseguir las mejores armaduras. En Niflheim, puedes farmear niebla para crear encantamientos únicos. Los cofres legendarios dorados contienen runas poderosas: búscalos en zonas altas y usa el hacha lanzada para activar los sellos.",
-        imagen: "imagenes/cofre.jpeg"
       }
     ]
   },
@@ -48,20 +36,14 @@ const data = {
       {
         titulo: "Dispara, patea, remata",
         texto:
-          "Apunta a la cabeza con L2 + R2, y cuando el enemigo quede tambaleando, acércate y pulsa ✖ para una patada que derriba a varios. Luego, remátalos en el suelo con cuchillo (L1 + R2).",
+          "Apunta a la cabeza y patea cuando el enemigo se tambalee. Luego remátalo con el cuchillo.",
         imagen: "imagenes/disparo.webp"
       },
       {
-        titulo: "Administra tu inventario",
+        titulo: "Inventario eficiente",
         texto:
-          "Usa el maletín con orden: coloca armas grandes abajo y curas arriba. Combina pólvoras (Y / Triángulo) para crear munición y guarda espacio para granadas.",
+          "Organiza tus objetos en el maletín y combina pólvoras para fabricar munición.",
         imagen: "imagenes/inventario.png"
-      },
-      {
-        titulo: "Truco del comerciante",
-        texto:
-          "Vende las gemas solo cuando completes un tesoro completo (combina rubíes, zafiros, etc.). Ganarás hasta el doble de pesetas.",
-        imagen: "imagenes/buho.jpg"
       }
     ]
   },
@@ -73,20 +55,14 @@ const data = {
       {
         titulo: "Domina el Parry",
         texto:
-          "Salta (A) y presiona A nuevamente justo cuando estés sobre un objeto rosa para hacer Parry. Esto recarga una carta de energía y te permite usar ataques EX con B.",
+          "Salta y presiona A nuevamente sobre objetos rosas para recargar energía y evitar daño.",
         imagen: "imagenes/parry.webp"
       },
       {
         titulo: "Elige bien tus armas",
         texto:
-          "El Chaser (autoapunta) es ideal para jefes móviles, mientras que el Spread (disparo corto) es brutal a corta distancia. Cámbialos según el enemigo (LB o L1).",
+          "Cambia entre disparos según el jefe: Chaser para distancia y Spread para corto alcance.",
         imagen: "imagenes/cup2.jpg"
-      },
-      {
-        titulo: "Modo oculto experto",
-        texto:
-          "Completa el juego una vez y desbloquearás el Modo Experto, donde los jefes atacan más rápido. Usa Charms como Smoke Bomb (esquiva invencible) para sobrevivir.",
-        imagen: "imagenes/cup3.jpg"
       }
     ]
   },
@@ -98,20 +74,14 @@ const data = {
       {
         titulo: "Domina el crafteo",
         texto:
-          "Aprende las combinaciones básicas: madera → tabla → palos → herramientas. Dominar el orden te ahorra tiempo al empezar un nuevo mundo.",
+          "Aprende combinaciones básicas: madera → tabla → palos → herramientas.",
         imagen: "imagenes/craft.jpg"
       },
       {
-        titulo: "Elige bien tus encantamientos",
+        titulo: "Elige tus encantamientos",
         texto:
-          "Eficiencia y Toque de Seda son ideales para el pico, mientras que Reparación e Irrompibilidad te ayudarán a conservar tus objetos valiosos.",
+          "Eficiencia y Toque de Seda para pico; Reparación e Irrompibilidad para objetos valiosos.",
         imagen: "imagenes/encant.jpg"
-      },
-      {
-        titulo: "Modo supervivencia",
-        texto:
-          "De noche, los enemigos aparecen con más frecuencia. Construye un refugio antes del anochecer y coloca antorchas alrededor para evitar mobs.",
-        imagen: "imagenes/survive.png"
       }
     ]
   },
@@ -121,22 +91,16 @@ const data = {
     fondo: "imagenes/asfondo.jpg",
     consejos: [
       {
-        titulo: "Aprovecha el sigilo",
+        titulo: "Usa el sigilo",
         texto:
-          "Aunque Valhalla prioriza el combate, el sigilo sigue siendo letal. Activa 'Asesinato avanzado' para eliminar enemigos con un solo golpe si aciertas el QTE (R3).",
+          "Activa 'Asesinato avanzado' para eliminar enemigos de un golpe con el timing correcto.",
         imagen: "imagenes/shh.jpg"
       },
       {
-        titulo: "Explora y mejora tu asentamiento",
+        titulo: "Mejora tu asentamiento",
         texto:
-          "Completa incursiones para obtener suministros y mejorar tu asentamiento. Cada mejora desbloquea nuevas misiones, armas y aliados.",
+          "Completa incursiones para obtener suministros y desbloquear nuevas misiones y armas.",
         imagen: "imagenes/asentamiento.jpg"
-      },
-      {
-        titulo: "Combos y habilidades",
-        texto:
-          "Asigna habilidades en el menú (R2 + botón direccional). Combina ataques ligeros (R1) y pesados (R2) para interrumpir bloqueos enemigos.",
-        imagen: "imagenes/combate.jpg"
       }
     ]
   },
@@ -146,22 +110,16 @@ const data = {
     fondo: "imagenes/fondotlou.jpg",
     consejos: [
       {
-        titulo: "Sigilo ante todo",
+        titulo: "Sigilo primero",
         texto:
-          "Presiona R1 para escuchar pasos a través de paredes. Muévete agachado (Círculo) y elimina en silencio con Triángulo desde atrás.",
+          "Presiona R1 para escuchar pasos y elimina en silencio con Triángulo.",
         imagen: "imagenes/tloustealth.jpg"
       },
       {
-        titulo: "Crea en el momento justo",
+        titulo: "Crafteo estratégico",
         texto:
-          "No craftees todo de golpe. Guarda alcohol y trapos para decidir entre cócteles molotov o botiquines según la situación (mantén R1).",
+          "Guarda materiales clave para decidir entre cócteles o botiquines.",
         imagen: "imagenes/tloucraft.jpg"
-      },
-      {
-        titulo: "Truco de los chasqueadores",
-        texto:
-          "Lanza botellas o ladrillos con L1 + R1 para distraerlos y luego elimínalos por sorpresa.",
-        imagen: "imagenes/clicker.jpg"
       }
     ]
   },
@@ -173,20 +131,14 @@ const data = {
       {
         titulo: "Farmea sin morir",
         texto:
-          "Concéntrate en el último golpe (clic derecho) para oro. No ataques sin visión. Usa el ward (Trinket con número 4) en arbustos cercanos.",
+          "Concéntrate en el último golpe y usa wards para visión. Evita sobreextenderte.",
         imagen: "imagenes/farm.jpg"
       },
       {
         titulo: "Aprende tu rol",
         texto:
-          "Cada rol tiene su función: top aguanta, jungla controla objetivos, mid aporta daño y bot trabaja en pareja con support. No te salgas de tu función.",
+          "Cada rol tiene su función: top aguanta, jungla controla, mid daña, bot coopera.",
         imagen: "imagenes/roles.jpg"
-      },
-      {
-        titulo: "Trucos de control",
-        texto:
-          "Usa Alt + clic izquierdo para pings rápidos. Con Shift + habilidad, fuerzas ataque directo. Y con Ctrl + 1,2,3,4 puedes hacer gestos.",
-        imagen: "imagenes/pings.jpg"
       }
     ]
   },
@@ -198,20 +150,14 @@ const data = {
       {
         titulo: "Tiros potentes",
         texto:
-          "Mantén L1 + R1 (o LB + RB) mientras disparas con círculo / B para hacer un tiro con potencia controlada. Ideal para fuera del área.",
+          "Mantén L1 + R1 mientras disparas para un tiro controlado y preciso.",
         imagen: "imagenes/fifashot.jpg"
       },
       {
         titulo: "Defensa manual",
         texto:
-          "Usa Jockey (L2 / LT) para mantener posición y presiona X / A solo cuando estés cerca del rival. Evita el 'carrusel de barridas'.",
+          "Usa L2 para jockey y X solo al estar cerca del rival. Evita barridas innecesarias.",
         imagen: "imagenes/defensa.jpg"
-      },
-      {
-        titulo: "Trucos de regate",
-        texto:
-          "Haz movimientos rápidos con el joystick derecho. Por ejemplo: adelante + atrás para un amague, o medio círculo para una bicicleta.",
-        imagen: "imagenes/regate.jpg"
       }
     ]
   },
@@ -223,73 +169,77 @@ const data = {
       {
         titulo: "Witch Time perfecto",
         texto:
-          "Esquiva justo antes del golpe enemigo (ZR / RT). El tiempo se ralentiza y puedes castigar con combos aéreos (X + A).",
+          "Esquiva justo antes del golpe enemigo para ralentizar el tiempo y castigar con combos.",
         imagen: "imagenes/witchtime.jpg"
       },
       {
         titulo: "Usa demonios infernales",
         texto:
-          "Mantén ZL para invocar demonios gigantes. Pero cuidado, Bayonetta queda vulnerable mientras están activos.",
+          "Mantén ZL para invocar demonios gigantes, pero cuida tu vulnerabilidad.",
         imagen: "imagenes/demon.jpg"
-      },
-      {
-        titulo: "Encuentra los versículos ocultos",
-        texto:
-          "Explora los escenarios y destruye los portales morados: cada uno desbloquea batallas secretas que te dan halos extra.",
-        imagen: "imagenes/versiculo.jpg"
       }
     ]
   },
 
   "five nights at freddy's": {
     logo: "imagenes/fnaf.png",
-    fondo: "imagenes/fondofnaf.jpg",
+    // ✅ Cambiamos fondo a URL funcional si tu archivo local falla
+    fondo: "https://upload.wikimedia.org/wikipedia/en/3/3d/Five_Nights_at_Freddy%27s_cover_art.jpg",
     consejos: [
       {
         titulo: "Ahorra energía",
         texto:
-          "Las puertas consumen mucha batería. Solo ciérralas cuando veas animatrónicos en la cámara o al lado del pasillo.",
+          "Las puertas consumen batería. Úsalas solo cuando haya peligro real.",
         imagen: "imagenes/power.jpg"
       },
       {
         titulo: "Escucha los sonidos",
         texto:
-          "Freddy y Foxy hacen ruidos característicos antes de moverse. Usa auriculares y reacciona rápido.",
+          "Freddy y Foxy hacen ruidos antes de moverse. Usa audífonos y reacciona rápido.",
         imagen: "imagenes/sonido.jpg"
-      },
-      {
-        titulo: "Truco de cámaras",
-        texto:
-          "Alterna rápido entre la cámara 1C (Pirate Cove) y otras zonas para mantener a Foxy controlado y evitar que corra hacia ti.",
-        imagen: "imagenes/cam.jpg"
       }
     ]
   }
 };
 
-// 🟣 Carga el juego seleccionado desde localStorage
+// 🟣 Cargar juego seleccionado
 const selectedGame = JSON.parse(localStorage.getItem("selectedGame"));
+
+// Si no se seleccionó ningún juego, redirigir
+if (!selectedGame) {
+  console.warn("No se seleccionó ningún juego. Redirigiendo al catálogo...");
+  window.location.href = "P-Principal.html";
+}
+
+// Normalizar nombre del juego
 const nombreNormalizado = normalizarTexto(selectedGame.nombre);
 
+// Buscar el juego en el objeto `data`
 const clave = Object.keys(data).find(
   (k) => normalizarTexto(k) === nombreNormalizado
 );
 
 if (!clave) {
   console.error("Juego no encontrado:", selectedGame);
+  document.getElementById("consejosContainer").innerHTML =
+    "<p style='color:white;text-align:center;font-size:1.2rem;'>Juego no encontrado. Regresa al catálogo.</p>";
 } else {
   const juego = data[clave];
 
+  // Aplicar fondo dinámico
   document.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${juego.fondo})`;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 
+  // Mostrar logo y título
   document.getElementById("logoJuego").src = juego.logo;
   document.getElementById("gameTitle").textContent = clave;
 
+  // Contenedor de consejos
   const contenedor = document.getElementById("consejosContainer");
   contenedor.innerHTML = "";
 
+  // Renderizar consejos
   juego.consejos.forEach((c) => {
     const bloque = document.createElement("div");
     bloque.classList.add("consejo-bloque");
