@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+
+  <!-- 🔸 MENÚ DE NAVEGACIÓN GLOBAL -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="login.html">Iniciar Sesión</a></li>
+      <li><a href="P-Principal.html">Catálogo</a></li>
+      <li><a href="consejos.html">Consejos Gamer</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔸 CONTENIDO ORIGINAL (sin cambios) -->
   <div class="login-container">
     <div class="avatar">
       <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Usuario">
@@ -19,10 +31,12 @@
       <label for="password">Contraseña</label>
       <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
 
-      <button type="submit">Iniciar sesión</button>
+      <!-- 🔸 NUEVO BOTÓN FUNCIONAL -->
+      <button type="button" onclick="window.location.href='P-Principal.html'">Iniciar sesión</button>
 
       <p class="register-text">¿No tienes cuenta? <a href="#">Crea una :D</a></p>
     </form>
   </div>
+
 </body>
 </html>
