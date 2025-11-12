@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 Catálogo Gamer 2025</title>
+  <link rel="stylesheet" href="css/P-principal.css">
+</head>
+<body>
+
+  <!-- === ENCABEZADO === -->
+  <header class="header">
+    <h1>🎮 Catálogo Gamer 2025</h1>
+    <p>Explora los videojuegos más épicos del año</p>
+  </header>
+
+  <!-- === CARRUSEL === -->
+  <section class="carrusel">
+    <button id="atras" class="btn-carrusel flecha-izq" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" viewBox="0 0 16 16">
+        <path fill="white" d="M11 1L3 8l8 7V1z"/>
+      </svg>
+    </button>
+
+    <div id="img" class="contenedor-imagen"></div>
+
+    <div class="carrusel-texto">
+      <div id="texto"></div>
+      <div id="puntos" class="puntos"></div>
+    </div>
+
+    <button id="adelante" class="btn-carrusel flecha-der" aria-label="Siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" viewBox="0 0 16 16">
+        <path fill="white" d="M5 1l8 7-8 7V1z"/>
+      </svg>
+    </button>
+  </section>
+
+  <h2 class="titulo-seccion">🔥 Los 10 videojuegos más destacados</h2>
+
+  <!-- === TARJETAS === -->
+  <main class="catalogo-juegos">
+    <!-- Se genera dinámicamente con JS -->
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Catálogo Gamer </p>
+  </footer>
+
+  <script src="Script/app.js" defer></script>
+</body>
+</html>

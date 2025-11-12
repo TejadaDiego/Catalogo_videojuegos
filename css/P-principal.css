@@ -1,0 +1,207 @@
+/* === VARIABLES Y BASE === */
+:root {
+  --azul: #00c3ff;
+  --violeta: #7b2ff7;
+  --fondo: #0b0e16;
+  --texto: #e4e4e4;
+  --tarjeta: rgba(255,255,255,0.05);
+  --sombra: 0 4px 20px rgba(0,0,0,0.5);
+  --radio: 15px;
+}
+
+body {
+  background: linear-gradient(135deg, #0b0e16, #1b1f2f);
+  color: var(--texto);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === ENCABEZADO === */
+.header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+.header h1 {
+  font-size: 2.2rem;
+  color: var(--azul);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.header p {
+  color: #ccc;
+  font-weight: 300;
+}
+
+/* === CARRUSEL === */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.contenedor-imagen {
+  width: 850px;
+  height: 480px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radio);
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carrusel-texto {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+.puntos p {
+  display: inline-block;
+  font-size: 28px;
+  margin: 0 4px;
+  color: #999;
+}
+
+.bold {
+  color: var(--azul);
+}
+
+/* === FLECHAS === */
+.btn-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-carrusel:hover {
+  background: rgba(0,195,255,0.8);
+  box-shadow: 0 0 15px rgba(0,195,255,0.6);
+}
+
+.flecha-izq { left: -70px; }
+.flecha-der { right: -70px; }
+
+/* === TARJETAS === */
+.titulo-seccion {
+  text-align: center;
+  color: var(--violeta);
+  font-size: 1.6rem;
+  margin: 30px 0 10px;
+}
+
+.catalogo-juegos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.steam-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tarjeta);
+  border-radius: var(--radio);
+  width: 280px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.steam-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.4);
+}
+
+.steam-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.steam-card h2 {
+  color: var(--azul);
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.steam-card p {
+  margin: 0 10px 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.steam-info {
+  list-style: none;
+  padding: 0 15px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.steam-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+}
+
+.steam-tags span {
+  background: rgba(255,255,255,0.1);
+  color: var(--azul);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.steam-tags span:hover {
+  background: var(--azul);
+  color: #0b0e16;
+}
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  padding: 25px 10px;
+  background: rgba(255,255,255,0.05);
+  margin-top: 40px;
+  color: #888;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .contenedor-imagen {
+    width: 90%;
+    height: 260px;
+  }
+  .flecha-izq { left: 10px; }
+  .flecha-der { right: 10px; }
+}

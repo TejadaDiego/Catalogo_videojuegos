@@ -1,0 +1,97 @@
+/* Fondo con degradado azul-blanco-negro animado */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #0a3d91, #ffffff, #000000);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación del degradado */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del login */
+.login-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  width: 300px;
+  box-shadow: 0 0 25px rgba(0, 102, 255, 0.5);
+}
+
+/* Imagen del usuario */
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+  color: #000;
+  font-size: 14px;
+}
+
+/* Botón de inicio de sesión */
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0066ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0040aa;
+  box-shadow: 0 0 15px #0066ff;
+}
+
+/* Texto inferior */
+.register-text {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.register-text a {
+  color: #b9a8ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
